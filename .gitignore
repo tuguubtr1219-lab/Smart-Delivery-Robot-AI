@@ -1,0 +1,8 @@
+.venv/
+.vscode/
+__pycache__/
+*.pyc
+*.pkl
+faces_dataset/
+saved_maps/
+runs/

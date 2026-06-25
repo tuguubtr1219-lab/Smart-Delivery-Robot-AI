@@ -1,0 +1,10 @@
+opencv-python
+numpy
+open3d
+ultralytics
+insightface
+onnxruntime
+record3d
+Pillow
+qrcode[pil]
+pyserial
