@@ -1,34 +1,61 @@
-# Smart Delivery Robot AI - Modular Version
+# Smart Delivery Robot AI - Modular Version  
+  ## Overview
+
+This project is an AI-powered indoor delivery robot designed for autonomous delivery in indoor environments.
+
+Features:
+
+- RGBD Camera Input
+- Face Recognition
+- LiDAR Safety Detection
+- Visual Odometry
+- Occupancy Mapping
+- Autonomous Navigation
+- Graphical User Interface (GUI)
+
+The robot can recognize users, monitor obstacles, generate maps, and navigate safely to a destination.
+
+## Hardware Requirements
+
+- Record3D compatible mobile device
+- RGBD camera
+- LiDAR sensor
+- Windows 10/11
+- Python 3.11
+
+## Installation
+
 ```bash
-#before run we need a little bit set up:you need to run :
-pip install -r requirements.txt 
-#or
-python -m pip install -r requirements.txt
-#or
-python -m pip install opencv-python numpy open3d ultralytics insightface onnxruntime record3d Pillow "qrcode[pil]" pyserial
-#before run main.py
-#if you want to start camera you need to download record3d in you phone then connect with computer by usb
+pip install -r requirements.txt
+
 ```
 
-Run:
+## Run
 
 ```bash
 python main.py
 ```
 
-idea:
+## Design Concept
 
-- The app opens with camera OFF.
-- Click **Start Camera** to connect to Record3D through USB.
-- Left column only keeps main actions.
-- Right column changes based on mode:
-  - **Driving**: LiDAR zone show/hide.
-  - **Map**: Start/Stop VO, Start/Pause Mapping, Camera Panel show/hide, LiDAR zone show/hide.
-- YOLO and InsightFace now lazy-load only when needed.
-- RGB + depth are downscaled early for lower latency.
-- Map drawing, VO, YOLO, and mapping updates run less frequently to reduce lag.
+* The application starts with the camera disabled by default.
+* Users can connect a Record3D camera through USB and start real-time data acquisition.
+* Face recognition is used for user identification and registration.
+* LiDAR safety detection helps avoid obstacles and unsafe navigation paths.
+* Visual odometry is used to estimate robot movement and position.
+* Occupancy mapping generates a navigable map of the environment.
+* The graphical user interface allows users to control navigation, mapping, and monitoring functions.
 
-note:
+### Future Improvements
+
+* Real-time autonomous path planning.
+* Cloud-based map storage and synchronization.
+* Voice command integration.
+* Multi-user recognition support.
+* Improved obstacle avoidance using AI-based object detection.
+
+
+## Project Structure
 
 - `main.py`: app entry point
 - `gui.py`: Tkinter GUI and processing loop
@@ -46,4 +73,13 @@ note:
 - `dialogs.py`: Tkinter dialogs
 - `drawing.py`: overlay UI drawing helpers
 
+## Authors
 
+Providence University  
+Department of Computer Science and Information Engineering
+
+Team Project (2026)
+
+Team Members:
+- Tuguldur Batbayar
+- 許俊成
